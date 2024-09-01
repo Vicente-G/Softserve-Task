@@ -1,0 +1,16 @@
+name: CI Check
+on:
+  push:
+    branches: [ main ]
+jobs:
+  checking:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: pdm-project/setup-pdm@v4
+      with:
+        python-version: 3.9
+        cache: true
+    - run: pdm sync
+    - run: pdm run check
+    - run: pdm run test

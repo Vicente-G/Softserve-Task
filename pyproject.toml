@@ -1,0 +1,63 @@
+[project]
+name = "softserve-task"
+version = "0.1.0"
+description = "Softserve task to join as junior Python tester"
+authors = [
+    {name = "Vicente-G"},
+]
+dependencies = [
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=24.8.0",
+    "ruff>=0.6.3",
+    "pytest>=8.3.2",
+    "pytest-mock>=3.14.0",
+]
+
+[tool.pdm.scripts]
+fix = { composite = [
+    "black ./src ./tests",
+    "ruff check --fix ./src ./tests",
+] }
+check = { composite = [
+    "black --check ./src ./tests",
+    "ruff check ./src ./tests",
+] }
+test = "pytest -v ./tests"
+start = "python ./src/__init__.py"
+
+[tool.black]
+line-length = 80
+
+[tool.ruff]
+lint.extend-select = [
+    "B",
+    "BLE",
+    "C4",
+    "ERA",
+    "I",
+    "ICN",
+    "ISC",
+    "N",
+    "NPY",
+    "PGH",
+    "PIE",
+    "Q",
+    "RET",
+    "RSE",
+    "RUF",
+    "S",
+    "SIM",
+    "T20",
+    "TCH",
+    "TID",
+    "YTT",
+]
+lint.ignore = ["E402", "B905", "N818", "S101", "S104", "T201"]
+show-fixes = true
