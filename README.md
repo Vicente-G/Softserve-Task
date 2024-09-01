@@ -1,6 +1,6 @@
 # My task submition for Softserve
 
-[![tests](https://github.com/Vicente-G/Softserve-Task/actions/workflows/ci.yml/badge.svg?event=push)](https://github.com/Vicente-G/Softserve-Task/actions/workflows/ci.yml)
+[![tests](https://github.com/Vicente-G/Softserve-Task/actions/workflows/ci.yml/badge.svg)](https://github.com/Vicente-G/Softserve-Task/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-purple.svg)](https://github.com/Vicente-G/Database-Model/blob/main/LICENSE)
 [![pdm-managed](https://img.shields.io/endpoint?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fpdm-project%2F.github%2Fbadge.json)](https://pdm-project.org)
 
